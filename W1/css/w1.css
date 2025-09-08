@@ -1,0 +1,39 @@
+h1{
+    background-color: olivedrab;
+    color: orange;
+    width: 50%;
+    margin:0 auto;
+    text-align:center;
+    border-radius: 10px;
+}
+#main_nav{
+    background-color: olivedrab; 
+    border-radius: 10px;
+    padding: 10px;
+}
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    border: 1px solid black;
+    
+}
+div{
+    margin:10px;
+}
+section{
+    display:flex;
+}
+body{
+    background-color: beige;
+}
+p{
+    text-align: center;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+*{
+    font-family: "Story Script", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
