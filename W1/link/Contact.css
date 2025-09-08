@@ -64,6 +64,11 @@ footer{
     background-color: rgb(16, 78, 129);
     color: white;
 }
+#footer_text{
+    background-color: rgb(16, 78, 129);
+    color: white;
+    font-size: 10px;
+}
 *{
     font-family: "Story Script", sans-serif;
     font-weight: 400;
