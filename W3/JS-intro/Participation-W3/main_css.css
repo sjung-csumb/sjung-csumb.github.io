@@ -1,0 +1,90 @@
+:root {
+   font-size: 18px;
+   max-width: 800px;
+   text-align: center;
+   font-family: 'Rubik', sans-serif;
+}
+
+body {
+   /* position: relative; */
+   background: linear-gradient(
+          rgba(0, 0, 0, 0.7), 
+          rgba(0, 0, 0, 0.7)
+        ),url('/assets/images/corolla-ae86.jpg');
+      color: white;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+}
+
+content {
+   margin: 0 auto;
+   max-width: 800px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: 'Kanit';
+}
+
+/* Kanit */
+@font-face {
+  font-family: 'Kanit';
+  src:  url('/assets/fonts/kanit/kanit-latin-400-normal.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Kanit';
+  src:  url('/assets/fonts/kanit/kanit-latin-500-normal.woff2') format('woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Kanit';
+  src:  url('/assets/fonts/kanit/kanit-latin-600-normal.woff2') format('woff2');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Kanit';
+  src:  url('/assets/fonts/kanit/kanit-latin-700-normal.woff2') format('woff2');
+  font-weight: 700;
+}
+
+/* Rubik */
+@font-face {
+  font-family: 'Rubik';
+  src:  url('/assets/fonts/rubik/rubik-latin-400-normal.woff') format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src:  url('/assets/fonts/rubik/rubik-latin-500-normal.woff') format('woff');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src:  url('/assets/fonts/rubik/rubik-latin-600-normal.woff') format('woff');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src:  url('/assets/fonts/rubik/rubik-latin-700-normal.woff') format('woff');
+  font-weight: 700;
+}
+
+
+#guess-button {
+   background-color: darksalmon;
+   padding: 3px 6px;
+   border: 1px solid dimgray;
+}
+#guess-button:hover {
+   background-color: lightsalmon;
+   cursor: pointer;
+}
