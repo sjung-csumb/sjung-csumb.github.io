@@ -1,0 +1,173 @@
+/* An external CSS file with at least 20 CSS properties. Must use at least a Flexbox */
+/*  color combinations
+    color: #FF5733;
+    color: #33C1FF;
+    color: #33FF57;
+    color: #FF33A8; */
+*{
+  font-family: "WDXL Lubrifont TC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+body{
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+#main_body{
+    background: linear-gradient(
+          rgba(0, 0, 0, 0.5), 
+          rgba(0, 0, 0, 0.7)
+        ),url('./assets/img/cnn.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+#db_body{
+    background: linear-gradient(
+          rgba(0, 0, 0, 0.7), 
+          rgba(0, 0, 0, 0.7)
+        ),url('./assets/img/db.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+#hci_body{
+    background: linear-gradient(
+          rgba(0, 0, 0, 0.7), 
+          rgba(0, 0, 0, 0.7)
+        ),url('./assets/img/hci.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+#emb_body{
+    background: linear-gradient(
+          rgba(0, 0, 0, 0.7), 
+          rgba(0, 0, 0, 0.7)
+        ),url('./assets/img/emb.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+h1{
+    font-size: 2.5em;
+    text-align: center;
+    
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+#t0{
+    color: #4A90E2;
+}
+#t1{
+    color: #33C1FF;
+}
+#t2{
+    color: #FF5733;
+}
+#t3{
+    color: #33FF57;
+}
+nav{
+    background-color: #f8f8f8;
+    padding: 10px 0;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    
+}
+ul li{
+    margin: 0 auto;
+}
+ul li a{
+    margin: 0 auto;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+ul li a:hover{
+    color: #4A90E2;
+}
+.continer{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #555;
+    font-size: 1.1em;
+    border: 1px solid #e0e0e0;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#a1{
+    background-color: #E8F0FE;
+    background: linear-gradient(
+          rgba(0, 0, 0, 0.7), 
+          rgba(0, 0, 0, 0.7)
+        ),url('./assets/img/db.jpg');
+}
+#a1 button{
+    background-color: #E8F0FE;
+    color: #000;
+}
+#a2{
+    background-color: #FDEFE8;
+    background: linear-gradient(
+          rgba(0, 0, 0, 0.7), 
+          rgba(0, 0, 0, 0.7)
+        ),url('./assets/img/hci.png');
+}
+#a2 button{
+    background-color: #FDEFE8;
+    color: #000;
+}
+#a3{
+    background-color: #E8FDF5;
+    background: linear-gradient(
+          rgba(0, 0, 0, 0.7), 
+          rgba(0, 0, 0, 0.7)
+        ),url('./assets/img/emb.jpeg');
+}
+#a3 button{
+    background-color: #E8FDF5;
+    color: #000;
+}
+#a4{
+    background-color: #F3E8FD;
+    background: linear-gradient(
+          rgba(0, 0, 0, 0.5), 
+          rgba(0, 0, 0, 0.7)
+        ),url('./assets/img/cnn.jpeg');
+}
+#a4 button{
+    background-color: #F3E8FD;
+    color: #000;
+}
+.btn{
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.btn:hover{
+    background-color: #357ABD;
+    transform: scale(1.05);
+}
