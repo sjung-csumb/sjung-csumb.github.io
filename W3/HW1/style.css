@@ -15,6 +15,15 @@ body{
     margin: 0;
     padding: 0;
 }
+#main_body{
+    background: linear-gradient(
+          rgba(0, 0, 0, 0.5), 
+          rgba(0, 0, 0, 0.7)
+        ),url('./assets/img/cnn.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
 #db_body{
     background: linear-gradient(
           rgba(0, 0, 0, 0.7), 
