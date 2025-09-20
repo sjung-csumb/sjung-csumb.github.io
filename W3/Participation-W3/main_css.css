@@ -1,12 +1,4 @@
-:root {
-   font-size: 18px;
-   max-width: 800px;
-   text-align: center;
-   font-family: 'Rubik', sans-serif;
-}
-
 body {
-   /* position: relative; */
    background: linear-gradient(
           rgba(0, 0, 0, 0.7), 
           rgba(0, 0, 0, 0.7)
@@ -15,70 +7,38 @@ body {
       width: 100%;
       display: flex;
       align-items: center;
-      justify-content: center;
-      flex-direction: row;
 }
 
 content {
    margin: 0 auto;
    max-width: 800px;
 }
-
-h1, h2, h3, h4, h5, h6 {
-   font-family: 'Kanit';
+h1, h2, h3 {
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   color: darkorange;
 }
-
-/* Kanit */
-@font-face {
-  font-family: 'Kanit';
-  src:  url('/assets/fonts/kanit/kanit-latin-400-normal.woff2') format('woff2');
-  font-weight: 400;
+p {
+   font-family: 'Arial', sans-serif;
+   font-size: 18px;
+   line-height: 1.6;
+   margin-bottom: 20px;
+   text-align: center;
 }
-
-@font-face {
-  font-family: 'Kanit';
-  src:  url('/assets/fonts/kanit/kanit-latin-500-normal.woff2') format('woff2');
-  font-weight: 500;
+input {
+   padding: 5px;
+   font-size: 16px;
+   border: 1px solid dimgray;
+   border-radius: 4px;
+   margin-right: 10px;
 }
-
-@font-face {
-  font-family: 'Kanit';
-  src:  url('/assets/fonts/kanit/kanit-latin-600-normal.woff2') format('woff2');
-  font-weight: 600;
+button {
+   font-size: 16px;
+   border-radius: 4px;
+   margin-top: 10px;
 }
-
-@font-face {
-  font-family: 'Kanit';
-  src:  url('/assets/fonts/kanit/kanit-latin-700-normal.woff2') format('woff2');
-  font-weight: 700;
+button:hover {
+   cursor: pointer;
 }
-
-/* Rubik */
-@font-face {
-  font-family: 'Rubik';
-  src:  url('/assets/fonts/rubik/rubik-latin-400-normal.woff') format('woff');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Rubik';
-  src:  url('/assets/fonts/rubik/rubik-latin-500-normal.woff') format('woff');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'Rubik';
-  src:  url('/assets/fonts/rubik/rubik-latin-600-normal.woff') format('woff');
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: 'Rubik';
-  src:  url('/assets/fonts/rubik/rubik-latin-700-normal.woff') format('woff');
-  font-weight: 700;
-}
-
-
 #guess-button {
    background-color: darksalmon;
    padding: 3px 6px;
@@ -87,4 +47,13 @@ h1, h2, h3, h4, h5, h6 {
 #guess-button:hover {
    background-color: lightsalmon;
    cursor: pointer;
+}
+#status-display{
+  height: 30px;
+  width: 90%;
+  background-color: dimgrey;
+}
+#gameDisplay{
+  margin: 0 auto;
+  text-align : center;
 }

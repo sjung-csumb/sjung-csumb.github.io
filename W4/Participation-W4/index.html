@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/underscore@1.13.7/underscore-umd-min.js"></script>
+<script src="script.js" defer></script>
+<body>
+    <!-- Q1 -->
+    <h2 id="q1">Question 1</h2>
+    <label for="a1">What is my favorite color?</label>
+    <input id="a1">
+    <p id="a1-result"></p>
+    
+    <hr>
+    
+    <!-- Q2 -->
+    <!-- name for exclusive selection for radio buttons -->
+    <h2 id="q2">Question 2</h2>
+    <p>What is the color of iguana?</p>
+    <label for="a2"></label>
+    <div id="a2">
+        <input type="radio" id="red" name="colors" value="red">
+        <label for="red">Red</label>
+
+        <input type="radio" id="green" name="colors" value="green">
+        <label for="green">Green</label>
+
+        <input type="radio" id="blue" name="colors" value="blue">
+        <label for="blue">Blue</label>
+    </div>
+    <hr>
+
+    <!-- Q3 -->
+    <h2 id="q3">Question 3</h2>
+    <p>Check Every SQL Expressions</p>
+    <input type="checkbox" id="select" name="sql" value="SELECT">
+    <label for="select">SELECT</label>
+
+    <input type="checkbox" id="div" name="sql" value="DIV">
+    <label for="div">DIV</label>
+
+    <input type="checkbox" id="where" name="sql" value="WHERE">
+    <label for="where">WHERE</label>
+    <hr>
+
+    <!-- Q4 -->
+    <h2 id="q4">Question 4</h2>
+    <label for="math">what is 4 * 25?</label>
+    <input type="number" id="math">
+    <hr>
+    
+    
+
+    <!-- Q5 -->
+    <h2 id="q5">Question 5</h2>
+    <label for="fruit">What fruit do I like?</label>
+    <select name="fruit" id="fruit">
+        <option value="mango">Mango</option>
+        <option value="strawberry">Strawberry</option>
+        <option value="tomato">Tomato</option>
+        <option value="pear">Pear</option>
+    </select>
+    <hr>
+
+    <!-- Score -->
+    <h2 style="display:inline">Total Score: </h2>
+    <h2  style="display:inline"id="score"></h2>
+    <hr>
+
+    <!-- Button -->
+    <button id="submit">Submit</button>
+</body>
+</html>
