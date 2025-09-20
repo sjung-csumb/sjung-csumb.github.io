@@ -99,6 +99,8 @@ function resetgame() {
     //   iv.  Enable/Show Guess button, hide "Play Again" button
     guessInput.style.backgroundColor = "white";
     guessInput.value = '';
+    statusDisplay.style.color = "white";
+    statusDisplay.textContent='';
     guessButton.style.display = 'inline';
     playAgainButton.style.display = 'none';
 }
@@ -107,12 +109,15 @@ function resetgame() {
 
 function turnGreen() {
     guessInput.style.backgroundColor = "#77FF77";
+    statusDisplay.style.color = "#77FF77";
 }
 function turnYellow() {
     guessInput.style.backgroundColor = "yellow";
+    statusDisplay.style.color = "yellow";
 }
 function turnRed() {
     guessInput.style.backgroundColor = "red";
+    statusDisplay.style.color = "red";
 }
 
 
