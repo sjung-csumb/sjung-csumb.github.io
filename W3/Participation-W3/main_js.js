@@ -28,7 +28,7 @@ function checkGuess() {
     guess= guessInput.value;
     //   d. If the input is outside the range of 1 to 100 display an error message
     if (guess < 1 || guess > 99) {
-        statusDisplay.textContent = "Please enter a number between 1 and 100.";
+        statusDisplay.textContent = "Please enter a number between 1 and 99.";
         turnRed();
         return false;
     }
