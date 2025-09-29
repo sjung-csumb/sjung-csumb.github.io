@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>카지노 슬롯 머신</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(45deg, #111, #333);
+      color: white;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .slot-machine {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px auto;
+    }
+    .slot {
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+      background: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 10px #000;
+      overflow: hidden;
+    }
+    .slot img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+    .controls {
+      margin-top: 20px;
+    }
+    input {
+      width: 80px;
+      padding: 5px;
+      text-align: center;
+      font-size: 18px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background: gold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.2s;
+    }
+    button:hover {
+      background: orange;
+    }
+    .status {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .result {
+      margin-top: 15px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>카지노 슬롯 머신 🎰</h1>
+
+  <div class="slot-machine">
+    <div class="slot" id="slot1"><img src="https://i.imgur.com/1X5vP4K.png" alt="?" /></div>
+    <div class="slot" id="slot2"><img src="https://i.imgur.com/1X5vP4K.png" alt="?" /></div>
+    <div class="slot" id="slot3"><img src="https://i.imgur.com/1X5vP4K.png" alt="?" /></div>
+  </div>
+
+  <div class="controls">
+    <label for="bet">베팅 금액: </label>
+    <input type="number" id="bet" value="10" min="1" />
+  </div>
+
+  <button onclick="spin()">돌리기!</button>
+
+  <div class="status">💰 현재 코인: <span id="coins">100</span></div>
+  <div class="result" id="result"></div>
+
+  <script>
+    // 실제 카지노 스타일 심볼 이미지 목록 (예시 URL)
+    const icons = [
+      "https://i.imgur.com/1X5vP4K.png", // 예: 체리
+      "https://i.imgur.com/0v3K8V7.png", // 예: 레몬
+      "https://i.imgur.com/U4R9wTj.png", // 예: 포도
+      "https://i.imgur.com/8h1aM9S.png", // 예: 수박
+      "https://i.imgur.com/dU4jDzN.png", // 예: 별 / 스타
+      "https://i.imgur.com/6vV1nK7.png", // 예: 벨
+      "https://i.imgur.com/abcd123.png", // 예: BAR (이건 예시 — 실제 BAR 이미지 URL로 바꾸세요)
+      "https://i.imgur.com/efgh456.png"  // 예: 7 (이건 예시 — 실제 7 이미지 URL로 바꾸세요)
+    ];
+
+    let coins = 100;
+
+    function spin() {
+      const betElem = document.getElementById("bet");
+      const bet = parseInt(betElem.value);
+      const resultElem = document.getElementById("result");
+
+      if (isNaN(bet) || bet <= 0) {
+        resultElem.textContent = "⚠️ 유효한 베팅 금액을 입력하세요!";
+        resultElem.style.color = "yellow";
+        return;
+      }
+      if (bet > coins) {
+        resultElem.textContent = "💸 코인이 부족합니다!";
+        resultElem.style.color = "red";
+        return;
+      }
+
+      // 베팅 금액 차감
+      coins -= bet;
+
+      // 슬롯 결과 (랜덤 이미지 선택)
+      const slot1 = icons[Math.floor(Math.random() * icons.length)];
+      const slot2 = icons[Math.floor(Math.random() * icons.length)];
+      const slot3 = icons[Math.floor(Math.random() * icons.length)];
+
+      document.getElementById("slot1").innerHTML = `<img src="${slot1}" alt="sym" />`;
+      document.getElementById("slot2").innerHTML = `<img src="${slot2}" alt="sym" />`;
+      document.getElementById("slot3").innerHTML = `<img src="${slot3}" alt="sym" />`;
+
+      // 판정 (이미지 URL이 동일한지 비교)
+      if (slot1 === slot2 && slot2 === slot3) {
+        const win = bet * 5;
+        coins += win;
+        resultElem.textContent = `🎉 잭팟! ${win} 코인 획득!`;
+        resultElem.style.color = "gold";
+      } else if (slot1 === slot2 || slot2 === slot3 || slot1 === slot3) {
+        const win = bet * 2;
+        coins += win;
+        resultElem.textContent = `✨ 2개 일치! ${win} 코인 획득!`;
+        resultElem.style.color = "lightgreen";
+      } else {
+        resultElem.textContent = "😢 꽝! 코인을 잃었습니다.";
+        resultElem.style.color = "red";
+      }
+
+      document.getElementById("coins").textContent = coins;
+    }
+  </script>
+</body>
+</html>

@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slot Machine</title>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <title>🎰 Slot Machine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Story+Script&family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
 </head>
 <body>
-    <!-- Slot machine. Users enter an amount to "gamble" before playing on a slot machine with 3 different symbols (e.g., bars, seven, cherry). If the symbols are the same (three cherries), the player gets the amount entered multiplied by some number.
-     -->
-    <h1>Slot Machine(On Working)</h1>
-    <hr>
-    <div id="slot-machine">
-        <img id="pic1" class="slotPic" src="./asset/img/check.png" alt="p1">
-        <img id="pic1" class="slotPic" src="./asset/img/check.png" alt="p2">
-        <img id="pic1" class="slotPic" src="./asset/img/check.png" alt="p3">
-    </div>
+  <h1>🎰 Slot Machine Game🎰</h1>
+
+  <div class="slot-machine">
+    <div class="slot" id="slot1">❓</div>
+    <div class="slot" id="slot2">❓</div>
+    <div class="slot" id="slot3">❓</div>
+  </div>
+
+  <div class="controls">
+    <label for="bet">Bet Amout: </label>
+    <input type="number" id="bet" value="10" min="1">
+  </div>
+
+  <button onclick="spin()">Spin</button>
+  <button onclick="retrive()">Retrive</button>
+  <h2>RULES:</h2>
+  <p>2 Matches : 2x Multiflier <br> 3 Matches: JackPot! You will earn 5x Multiflier <br> You will lose the coin if there is no images matching. <br>Retrive: You will earn additional 100 coins </p>
+
+  <div class="status">💰 Current Money: <span id="coins">100</span></div>
+  <div class="result" id="result"></div>
 </body>
 </html>
