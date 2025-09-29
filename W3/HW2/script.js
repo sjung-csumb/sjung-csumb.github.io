@@ -1,8 +1,8 @@
 const icons = ["🍒", "🍋", "🍇", "🍉", "⭐", "🔔"];
 let coins = 100; // 초기 코인
-let s1 = document.getElementById("slot1").textContent;
-let s2 = document.getElementById("slot2").textContent;
-let s3 = document.getElementById("slot3").textContent;
+//let s1 = document.getElementById("slot1").textContent;
+//let s2 = document.getElementById("slot2").textContent;
+//let s3 = document.getElementById("slot3").textContent;
 let body = document.querySelector("body");
 
 
@@ -28,9 +28,9 @@ function spin() {
     const slot1 = icons[Math.floor(Math.random() * icons.length)];
     const slot2 = icons[Math.floor(Math.random() * icons.length)];
     const slot3 = icons[Math.floor(Math.random() * icons.length)];
-    s1 = slot1;
-    s2 = slot2;
-    s3 = slot3;
+    document.getElementById("slot1").textContent = slot1;
+    document.getElementById("slot2").textContent = slot2;
+    document.getElementById("slot3").textContent = slot3;
     
 
     // 판정
