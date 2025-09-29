@@ -37,17 +37,17 @@ function spin() {
     if (slot1 === slot2 && slot2 === slot3) {
         const win = bet * 5;
         coins += win;
-        result.textContent = `🎉 Congratulations! JackPot! Earned ${win} Coins!`;
+        result.textContent = `🎉 Congratulations! JackPot! Earned ${win} Coins! 🎉`;
         result.style.color = "gold";
         body.style.backgroundImage = "url('./asset/img/jackpot.jpg')";
     } else if (slot1 === slot2 || slot2 === slot3 || slot1 === slot3) {
         const win = bet * 2;
         coins += win;
-        result.textContent = `✨ Nice! 2 Matching! Earned ${win} Coins!`;
+        result.textContent = `✨ Nice! 2 Matching! Earned ${win} Coins! ✨`;
         result.style.color = "lightgreen";
         body.style.backgroundImage = "url('./asset/img/match.jpg')";
     } else {
-        result.textContent = "😢 Nothing! You lost coin.";
+        result.textContent = "😢 Nothing! You lost coin. Try again! 😢";
         result.style.color = "red";
         body.style.background = "linear-gradient(45deg, #222, #444)";
     }
@@ -58,11 +58,11 @@ function spin() {
 function retrieve(){
     if(coins <= 50){
         coins += 100;
-        result.textContent = "You Earned Additional 100 Coins!";
+        result.textContent = "💸💲You Earned Additional 100 Coins!💲💸";
         result.style.color = "#77FF77";
         body.style.backgroundImage = "url('./asset/img/money.webp')";
     }else{
-        result.textContent = "You Already Have Enough Coins!";
+        result.textContent = "🚫You Already Have Enough Coins!🚫";
         result.style.color = "#d6681eff";
         body.style.backgroundImage = "url('./asset/img/denied.jpg')";
     }
