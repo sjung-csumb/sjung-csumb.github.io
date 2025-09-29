@@ -36,3 +36,6 @@ input[type="text"], input[type="number"], select{
     background: rgba(0,0,0,0.18);
     color: #f8fffd;
 }
+select option{
+    background:#2578d09d;
+}
