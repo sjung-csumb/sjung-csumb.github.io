@@ -4,22 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Story+Script&family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.7/underscore-umd-min.js"></script>
+    <script src="script.js" defer></script>
 </head>
-<script src="https://cdn.jsdelivr.net/npm/underscore@1.13.7/underscore-umd-min.js"></script>
-<script src="script.js" defer></script>
+
 <body>
     <!-- Q1 -->
     <h2 id="q1">Question 1</h2>
-    <label for="a1">What is my favorite color?</label>
-    <input id="a1">
+    <img id="a1-img" class="result-img" src="./asset/img/check.png" alt="result1-img">
+    <label for="a1">What is my favorite color? Hint : blue</label>
+
+    <br>
+    <input type="text" id="a1">
     <p id="a1-result"></p>
+    
     
     <hr>
     
     <!-- Q2 -->
     <!-- name for exclusive selection for radio buttons -->
     <h2 id="q2">Question 2</h2>
-    <p>What is the color of iguana?</p>
+    <img id="a2-img" class="result-img" src="" alt="result2-img">
+    <p>What is the color of iguana? Hint:G</p>
+    
     <label for="a2"></label>
     <div id="a2">
         <input type="radio" id="red" name="colors" value="red">
@@ -31,43 +42,69 @@
         <input type="radio" id="blue" name="colors" value="blue">
         <label for="blue">Blue</label>
     </div>
+    <p id="a2-result"></p>
+    
     <hr>
 
     <!-- Q3 -->
     <h2 id="q3">Question 3</h2>
+    <img id="a3-img" class="result-img" src="" alt="result3-img">
     <p>Check Every SQL Expressions</p>
-    <input type="checkbox" id="select" name="sql" value="SELECT">
-    <label for="select">SELECT</label>
 
-    <input type="checkbox" id="div" name="sql" value="DIV">
-    <label for="div">DIV</label>
+    <div id="q3Cover">
+        <div>
+            <input type="checkbox" id="select" name="sql" value="SELECT">
+            <label for="select">SELECT</label>
+        </div>
+        <div>
+            <input type="checkbox" id="div" name="sql" value="DIV">
+            <label for="div">DIV</label>
+        </div>
+        <div>
+            <input type="checkbox" id="where" name="sql" value="WHERE">
+            <label for="where">WHERE</label>
+        </div>
+    </div>
 
-    <input type="checkbox" id="where" name="sql" value="WHERE">
-    <label for="where">WHERE</label>
+    <p id="a3-result"></p>
+    
     <hr>
 
     <!-- Q4 -->
     <h2 id="q4">Question 4</h2>
+    <img id="a4-img" class="result-img" src="" alt="result4-img">
     <label for="math">what is 4 * 25?</label>
+
+    <br>
+    
     <input type="number" id="math">
+    <p id="a4-result"></p>
     <hr>
     
     
 
     <!-- Q5 -->
     <h2 id="q5">Question 5</h2>
-    <label for="fruit">What fruit do I like?</label>
+    <img id="a5-img" class="result-img" src="" alt="result5-img">
+    <label for="fruit">What fruit do I like? Hint : Mango</label>
+
+    <br>
     <select name="fruit" id="fruit">
-        <option value="mango">Mango</option>
         <option value="strawberry">Strawberry</option>
+        <option value="mango">Mango</option>
         <option value="tomato">Tomato</option>
         <option value="pear">Pear</option>
     </select>
+    <p id="a5-result"></p>
+    
     <hr>
 
     <!-- Score -->
     <h2 style="display:inline">Total Score: </h2>
-    <h2  style="display:inline"id="score"></h2>
+    <h2 style="display:inline" id="score"></h2>
+    <p id="score-result"></p>
+
+    <h2 id="playtime">Play Time: </h2>
     <hr>
 
     <!-- Button -->
