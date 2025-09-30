@@ -1,0 +1,67 @@
+* {
+  font-family: "WDXL Lubrifont TC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    background : linear-gradient(rgba(0, 0, 0, 0.7), 
+          rgba(0, 0, 0, 0.7)),url("./img/corolla-ae86.jpg");
+}
+
+/* Center the main container */
+#main {
+    max-width: 400px;
+    margin: 60px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px 24px;
+    text-align: center;
+}
+
+/* Heading */
+header{
+    margin: 0 auto;
+    text-align: center;
+}
+h1 {
+    color: #2a7ae2;
+    margin-bottom: 18px;
+    font-size: 2rem;
+}
+
+input {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #b0bec5;
+    border-radius: 6px;
+    width: 80px;
+    margin-right: 10px;
+    transition: border 0.2s;
+}
+input:focus {
+    border-color: #2a7ae2;
+}
+
+button {
+    padding: 8px 18px;
+    font-size: 1rem;
+    background: #2a7ae2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+}
+button:hover {
+    background: #185bb5;
+}
+
+#feedback {
+    font-size: 1.15rem;
+}
+
+.num{
+    margin-top: 10px;
+    color: #607d8b;
+    font-size: 1rem;
+}
