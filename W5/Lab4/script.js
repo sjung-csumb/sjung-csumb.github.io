@@ -21,13 +21,15 @@ async function setUp(){
     } catch(apiError){
         console.log(apiError);
     }
+    updateCounty();
 
 }
 setUp();
 
 const stateSelect = document.querySelector('#stateSelect')
 // let countySelect = document.querySelector("#countySelect");
-stateSelect.addEventListener("change",async (ev)=>{
+stateSelect.addEventListener("change", updateCounty);
+async function updateCounty(){
     // console.log(ev.target.usps)
     console.log(stateSelect.selectedOptions[0])
     let usps = stateSelect.selectedOptions[0].getAttribute('usps').toLowerCase();
@@ -54,8 +56,7 @@ stateSelect.addEventListener("change",async (ev)=>{
     } catch(apiError){
         console.log(apiError);
     }
-
-});
+}
 
 
 //  Update values for City, Latitude, and Longitude when changing Zip Code.
@@ -67,12 +68,20 @@ zipCode.addEventListener("input",async ()=>{
             throw new Error("Response failed.");
         }
         let infoData = await infoResponse.json();
-        if(!infoData) return;
         console.log (infoData);
-        
-        document.querySelector('#info').innerHTML = `<p><b>City:</b>${infoData.city}</p> 
-        <p><b>Latitude:</b>${infoData.latitude}</p> 
-        <p><b>Longitude:</b>${infoData.longitude}</p>`
+        if(!infoData){
+            document.querySelector("#zipCheckDisplay").textContent = "Zip code not found.";
+            document.querySelector('#info').innerHTML = `<p><b>City:</b></p> 
+            <p><b>Latitude:</b></p> 
+            <p><b>Longitude:</b></p>`
+            return;
+        } else{
+            document.querySelector("#zipCheckDisplay").textContent = "";
+            document.querySelector('#info').innerHTML = `<p><b>City:</b>${infoData.city}</p> 
+            <p><b>Latitude:</b>${infoData.latitude}</p> 
+            <p><b>Longitude:</b>${infoData.longitude}</p>`
+        }
+    
     } catch(apiError){
         console.log(apiError);
     }
@@ -82,23 +91,25 @@ zipCode.addEventListener("input",async ()=>{
 // 2) Display suggested password when clicking on "Password" text box
 let pwBox = document.querySelector("#pw");
 let pwMsg = document.querySelector("#pwMsg");
+let pwCheck = document.querySelector("#pwCheck");
+let pwCheckMsg = document.querySelector("#pwCheckMsg");
 pwBox.addEventListener("click",async ()=>{
     let pwResponse = await fetch("https://csumb.space/api/suggestedPassword.php?length=8");
     let randomPW = await pwResponse.json();
     pwBox.value = randomPW.password;
-    if(pwBox.value.length <=6){
-        pwMsg.innerHTML = "Too Short!";
-        pwMsg.style.color = "red";
-    }
-    else{
-        pwMsg.innerHTML = "Too Short!";
-        pwMsg.style.color = "green";
-    }
 
 });
-pwBox.addEventListener("input",async ()=>{
+// pwBox.addEventListener("input",async ()=>{
+//     pwLenCheck();
 
-    if(pwBox.value.length <=6){
+// });
+
+// pwCheck.addEventListener("input",async ()=>{
+//     pwMatchingCheck();
+
+// });
+function pwLenCheck() {
+    if(pwBox.value.length < 6){
         pwMsg.innerHTML = "Too Short!";
         pwMsg.style.color = "red";
     }
@@ -107,12 +118,26 @@ pwBox.addEventListener("input",async ()=>{
         pwMsg.style.color = "green";
     }
 
-});
+}
 
+function pwMatchingCheck(){
+    if(pwCheck.value == "") return;
+
+    if(pwBox.value != pwCheck.value){
+        pwCheckMsg.innerHTML = "Retype Password";
+        pwCheckMsg.style.color = "red";
+    }
+    else{
+        pwCheckMsg.innerHTML = "Matching password";
+        pwCheckMsg.style.color = "green";
+    }
+
+}
 
 // 3) After entering a desired username, a message is displayed saying whether the username is available or not  (not available names are: eeny, meeny, miny, maria)
 // https://csumb.space/api/usernamesAPI.php?username=eeny
 let avail = document.querySelector('#avail');
+let valid = document.querySelector('#valid');
 let nickname = document.querySelector("#nickname");
 nickname.addEventListener("input",async ()=>{
     let availableAPI = await fetch(`https://csumb.space/api/usernamesAPI.php?username=${nickname.value}`);
@@ -120,13 +145,28 @@ nickname.addEventListener("input",async ()=>{
     console.log(available.available);
     if(available.available == true){
         avail.innerHTML = "available";
+        avail.style.color = "green";
     }
     else{
         avail.innerHTML = "not available";
+        avail.style.color = "red";
     }
-
 });
 
+
+document.querySelector("#submit").addEventListener("click",function (){
+    if(nickname.value.length < 3){
+        valid.innerHTML = "Username must have at least 3 characters.";
+        valid.style.color = "red";
+    }
+    else{
+        valid.innerHTML = "valid";
+        valid.style.color = "green";
+    }
+
+    pwLenCheck();
+    pwMatchingCheck();
+});
 
 
 

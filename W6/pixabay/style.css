@@ -1,0 +1,30 @@
+h1{
+    margin: 0 auto;
+    text-align:center;
+}
+#bgSelect{
+    text-align:center;
+    display:inline;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(249, 255, 243);
+    box-shadow: 10px;
+}
+#submitBtn{
+    display:inline;
+    padding : 10px;
+    border-radius: 5px;
+    background-color: rgb(243, 253, 255);
+
+}
+#title{
+    background-color: rgb(255, 247, 243);;
+}
+#cover{
+    text-align:center;
+}
+
+body{
+    background-repeat: no-repeat;
+    background-size : cover;
+}

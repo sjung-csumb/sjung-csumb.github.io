@@ -1,0 +1,48 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 2rem;
+	background: linear-gradient(180deg, #b9daf0 0%, #eef2f7 100%);
+	color: #036e78;
+}
+
+h1 {
+	text-align: center;
+	color: #36a0eb;
+	margin-bottom: 1rem;
+}
+
+fieldset {
+	background: #ffffff;
+	border: 1px solid #959698;
+	border-radius: 10px;
+	padding: 1.25rem 1.5rem;
+	max-width: 720px;
+	margin: 0 auto;
+	box-shadow: 0 6px 18px rgba(31,75,107,0.08);
+}
+
+legend {
+	font-weight: 700;
+	color: #133049;
+}
+
+
+/*ChatGpted*/
+fieldset input,
+fieldset select {
+	display: inline-block;
+	margin: 0.25rem 0 0.75rem 0;
+	padding: 0.45rem 0.6rem;
+	border: 1px solid #275386;
+	border-radius: 4px;
+	font-size: 0.95rem;
+}
+
+input#submit {
+	background: #1f4b6b;
+	color: white;
+	border: none;
+	padding: 0.6rem 0.95rem;
+	border-radius: 6px;
+	font-weight: 600;
+}

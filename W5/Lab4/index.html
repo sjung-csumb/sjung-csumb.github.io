@@ -1,25 +1,91 @@
-<h1> Sign Up Form </h1>
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./style.css">
+        <script src="./script.js" defer></script>
+    </head>
+    <body>
+        <h1> Sign Up Form </h1>
 
-<fieldset>
-<legend>Sign Up</legend>
-First Name: <input type="text"><br> 
-Last Name: <input type="text"><br> 
-Email: <input type="text"><br> 
-Phone Number:<input type="text"><br><br>
-Zip Code: <input type="text" id="zipCode"><br>
-<div id="info">
-<p><b>City:</b></p> 
-<p><b>Latitude:</b></p> 
-<p><b>Longitude:</b></p>
-</div>
-State:  <select id="stateSelect"></select><br>
-Select a County: <select id="countySelect"></select><br>
+        <fieldset>
+        <legend>Sign Up</legend>
+        First Name: <input type="text"><br> 
+        Last Name: <input type="text"><br> 
+        Email: <input type="text"><br> 
+        Phone Number:<input type="text"><br><br>
+        Zip Code: <input type="text" id="zipCode">
+        <p id="zipCheckDisplay" style="display: inline"></p>
+        <div id="info">
+            <p><b>City:</b></p> 
+            <p><b>Latitude:</b></p> 
+            <p><b>Longitude:</b></p>
+        </div>
+        State:  <select id="stateSelect"></select><br>
+        Select a County: <select id="countySelect"></select><br>
 
-Desired Username: <input type="text" id="nickname"><p id="avail"></p><br>
-Password: <input type="text" id="pw"><br>
-Type Password Again: <input type="password"><br>
-<input type="submit" value="Sign up!">
-<p id="pwMsg"></p>
-</fieldset>
+        Desired Username: <input type="text" id="nickname">
+        <p id="avail"></p>
+        <p id="valid"></p>
+        Password: <input type="text" id="pw"><br>
+        Type Password Again: <input type="password" id="pwCheck"><br>
+        <p id="pwMsg"></p>
+        <p id="pwCheckMsg"></p>
+        <input id="submit" type="submit" value="Sign up!">
 
- <script src="./script.js"></script>
+        </fieldset>
+
+        <p style="color : green">
+            1) City, longitude and latitude are updated when entering a zip code (10 pts) 
+        </p>
+        <p style="color : green">
+            2) A "Zip code not found" message is displayed next to its text box, if that's the case (10 pts) 
+        </p>    
+        <p style="color : green">
+            3) The list of counties is updated properly when selecting a State (10 pts) 
+        </p>
+        <p style="color : green">
+            4) Upon typing the username, a color-coded message indicates whether it is available or not (10 pts) 
+        </p>
+        <p style="color : green">
+            5) Upon clicking on the Password text box, a suggested password is displayed (10pts) 
+        </p>
+        <p style="color : green">
+            6) The list of all US states is displayed from the corresponding Web API (10 pts) 
+        </p>
+
+        <p style="color : green">
+            7) Page has a nice look and feel (uses Bootstrap or includes 20 CSS rules) (10 pts)
+        </p>
+        
+        <p style="color : black">
+            When clicking on the "Submit" button: 
+        </p>
+
+        <p style="color : green">
+            1) There is validation for Username having at least 3 characters   ( 10 pts)
+        </p>
+        
+        <p style="color : green">
+            2) There is validation for Password having at least 6 characters    (10 pts)
+        </p>
+            
+        <p style="color : green">
+            3) There is validation for Password matching "Retype Password"  (10 pts) 
+        </p>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

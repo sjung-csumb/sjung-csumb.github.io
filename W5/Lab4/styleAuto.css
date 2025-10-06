@@ -1,0 +1,89 @@
+/* General page layout */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 2rem;
+	background: linear-gradient(180deg, #f7fafc 0%, #eef2f7 100%);
+	color: #222;
+}
+
+h1 {
+	text-align: center;
+	color: #1f4b6b;
+	margin-bottom: 1rem;
+}
+
+fieldset {
+	background: #fff;
+	border: 1px solid #cbd5e1;
+	border-radius: 8px;
+	padding: 1.25rem 1.5rem;
+	max-width: 720px;
+	margin: 0 auto 1rem auto;
+	box-shadow: 0 6px 18px rgba(31,75,107,0.08);
+}
+
+legend {
+	font-weight: 700;
+	color: #133049;
+	padding: 0 0.5rem;
+}
+
+fieldset input[type="text"],
+fieldset input[type="password"],
+fieldset select {
+	display: inline-block;
+	margin: 0.25rem 0 0.75rem 0;
+	padding: 0.45rem 0.6rem;
+	border: 1px solid #cbd5e1;
+	border-radius: 4px;
+	font-size: 0.95rem;
+}
+
+input[type="submit"]#submit {
+	background: #1f4b6b;
+	color: white;
+	border: none;
+	padding: 0.6rem 0.95rem;
+	border-radius: 6px;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+/* Make paragraphs under the form area readable */
+#info p { margin: 0.25rem 0; }
+
+/* ----- Requirement: ignore (reset) the element immediately after fieldset ----- */
+/*
+	Using the adjacent sibling selector we reset common stylistic properties
+	so that whatever styles we applied to the fieldset do NOT bleed into the
+	next element after the fieldset. This effectively makes the next tag
+	behave as if it weren't affected by the fieldset styles.
+*/
+fieldset + * {
+	/* reset spacing & background */
+	margin-top: 0.75rem;
+	background: transparent;
+	color: inherit;
+	box-shadow: none;
+	border: none;
+	padding: 0;
+	max-width: none;
+}
+
+/* reset specific form-like properties that could affect following elements */
+fieldset + p,
+fieldset + div,
+fieldset + h1,
+fieldset + h2,
+fieldset + h3 {
+	margin: 0.75rem auto;
+}
+
+/* small utility classes used by the page */
+.green {
+	color: #0f9d58;
+}
+.red {
+	color: #d93025;
+}
+

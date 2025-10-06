@@ -1,0 +1,30 @@
+body{
+    background-repeat: no-repeat;
+    background-size : cover;
+    text-align:center;
+}
+body > *{
+    margin:0 auto;
+}
+#cover{
+    background-color: rgb(215, 250, 220);
+    padding: 10px;
+    border-radius: 10px;
+    width: 75%;
+}
+#bioContent{
+    display:none;
+}
+#bioContent > *{
+    display:flex;
+}
+#bioImg{
+    width: 100px;
+    height: 150px;
+}
+#scoreTable{
+    background-color:rgb(231, 250, 215);
+}
+#lanSelect > *{
+    display:inline;
+}
