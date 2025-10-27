@@ -13,9 +13,9 @@ app.use(express.static("public"));
 app.get('/', async (req, res) => {
 
    //Random Image from Pixabay API
-   let riResponse = await fetch("https://pixabay.com/api/?key=20426927-497d14db9c234faf7d0df8317&per_page=50&orientation=horizontal&q=sports+car");
+   let riResponse = await fetch("https://pixabay.com/api/?key=20426927-497d14db9c234faf7d0df8317&per_page=50&orientation=horizontal&q=galaxy");
    let riData = await riResponse.json();
-   let riURL = riData.hits[0].largeImageURL;
+   let riURL = riData.hits[Math.floor(Math.random()*10)+1].largeImageURL;
 
    console.log(riURL);
    
@@ -25,10 +25,22 @@ app.get('/', async (req, res) => {
 
 app.get('/planet', (req, res) => {
    let planet_name = req.query.planetName;
+   console.log(planet_name, solarSystem)
    let planetInfo = solarSystem[`get${planet_name}`]();
    //console.log(planetInfo);
-   res.render('planetInfo.ejs', {planetInfo,planet_name});
+
+   
+   if(planet_name == "Meteorite" ){
+      res.render('metPlanetInfo.ejs', {planetInfo,planet_name});
+   }else if(planet_name == "Comets"|| planet_name == "Asteroids"){
+      res.render('etcPlanetInfo.ejs', {planetInfo,planet_name});
+   } else {
+      res.render('planetInfo.ejs', {planetInfo,planet_name});
+   }
 });
+
+
+
 
 
 //mercury route

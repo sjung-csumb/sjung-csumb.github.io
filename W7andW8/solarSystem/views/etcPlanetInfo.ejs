@@ -17,15 +17,17 @@
     <h1 class="text-center bg-danger p-5 text-white m-0">The Solar System</h1>
     <!--Loading nav code. MUST USE - include("url") to inject the code.-->
     <%- include("partials/navbar.ejs") %>
-    <main class="page container my-5">
+
+
+        <main class="page container my-5">
         <div class="content">
             <div class="main-col">
-                <img src="<%=planetInfo.image %>" alt="planetInfo" class="img-fluid">
+                <img src="<%=planetInfo.image %>" alt="riURL" class="img-fluid">
                 <p class="caption mt-2 muted"></p>
             </div>
             <aside class="side-col">
                 <h3><%= planet_name %></h3>
-                <p class="lead"><%=planetInfo.description%></p>
+                <p class="lead"><%=planetInfo.def%></p>
                 <ul class="facts">
                     <li>Seokchan Jung</li>
                     <li>Internet Programming</li>

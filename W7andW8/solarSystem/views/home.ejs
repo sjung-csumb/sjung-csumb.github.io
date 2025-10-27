@@ -17,9 +17,26 @@
     <h1 class="text-center bg-danger p-5 text-white m-0">The Solar System</h1>
     <!--Loading nav code. MUST USE - include("url") to inject the code.-->
     <%- include("partials/navbar.ejs") %>
+    <!-- <%= riURL %> -->
 
-
-    <%= riURL%>
+    <main class="page container my-5">
+        <div class="content">
+            <div class="main-col">
+                <img src="<%= riURL %>" alt="riURL" class="img-fluid">
+                <p class="caption mt-2 muted"></p>
+            </div>
+            <aside class="side-col">
+                <h3>Welcome</h3>
+                <p class="lead">Explore the Solar System. Use the nav to view planets, comets and asteroid information. This right column is a responsive sidebar.</p>
+                <ul class="facts">
+                    <li>Seokchan Jung</li>
+                    <li>Internet Programming 336</li>
+                    <li>Solar System</li>
+                </ul>
+            </aside>
+        </div>
+    </main>
+    <%- include("partials/footer.ejs") %>
 </body>
 
 <!--Additional Info.-->
